@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffafc;
+    color: #333;
+}
+
+/* Header Topo (cupom) */
+.sobreheader {
+    background-color: #1c2120;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Cabeçalho com busca, logo e ícones */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.busca,
+.logo,
+.icones {
+    flex: 1;
+    text-align: center;
+}
+
+/* Input de busca */
+.linha {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+
+/* Faixa entrega */
+.faixa-entrega img {
+    width: 100%;
+    height: auto;
+}
+
+/* Área principal de produtos */
+main {
+    padding: 20px;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.produto {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: scale(1.03);
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #1c2120;
+}
+
+.produto p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Botões */
+.produto button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    background-color: #1c2120;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.produto button:hover {
+    background-color: #1c2120;
+}
+
+/* Footer básico (pode adicionar mais se quiser) */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1c2120;
+    color: white;
+    text-align: center;
+}
+
+.botoes-comprar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .botao-comprar, .botao-carrinho {
+    background-color: #1c2120;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .botao-carrinho img {
+    width: 20px;
+    height: 20px;
+  }
