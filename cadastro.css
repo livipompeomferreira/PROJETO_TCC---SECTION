@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -18,19 +18,59 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
-/* Caixa branca central */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 .login-box {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    
+  background-color: #fff;
+  width: 1100px;     /* aumentei a largura */
+  height: auto;     /* altura automática para adaptar ao conteúdo */
+  max-height: 700px; /* limite máximo de altura, se quiser */
+  padding: 2rem;
+  border-radius: 4rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* adiciona scroll vertical se passar do max-height */
+
+
+  /* Flex para centralizar conteúdo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Fundo do scroll dentro da caixa */
+  background-clip: padding-box; 
+}
+
+/* Scrollbar para WebKit */
+.login-box::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent; /* fundo transparente para não “quebrar” a borda da caixa */
+}
+
+.login-box::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 8px;
+  border: 3px solid #fff;  /* borda branca dentro do polegar, para destacar */
+}
+
+/* Scrollbar para Firefox */
+.login-box {
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
 }
 
 /* Cabeçalhos */
@@ -88,3 +128,4 @@ header {
         padding: 1rem;
     }
 }
+

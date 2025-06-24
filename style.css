@@ -1,7 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url(
+'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.linha {
+            border: none;
+            border-bottom: 5px solid black;
+            outline: none;
+            padding: 5px;
+            width: 120px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .grid-item {
+            flex: 1 1 300px;
+        }
+
+        .banner, .section-title, .subtitulo {
+            text-align: center;
+
+              animation: glowIn 1.5s ease-out;
+              
+        }
+
+@keyframes glowIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.4);
+  }
+}
 
 
-/* Layout geral */
+.grid-itembr{
+  transition: transform 0.3s ease;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  
+}
+
+.grid-itembr:hover{
+  transform: scale(1.02);
+}
+
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,7 +71,7 @@ body {
   align-items: center;
 }
 
-/* Header principal */
+
 header {
   display: flex;
   justify-content: space-around;
@@ -26,7 +86,11 @@ header {
   font-weight: bold;
 }
 
-/* Sobre header */
+#marimaria img{
+  width: 70px;
+  height: 70px;
+}
+
 .sobreheader {
   background-color: #1C2120;
   color: rgba(255, 255, 255, 0.87);
@@ -42,11 +106,12 @@ h1, h3 {
   text-align: center;
   font-weight: normal;
   margin: 3px 0;
+  
 
 }
 
 
-/* Estilo para campos de busca */
+
 .linha {
   border: none;
   border-bottom: 1px solid black;
@@ -55,13 +120,13 @@ h1, h3 {
   width: 150px;
 }
 
-/* Logo centralizada */
+
 .logo {
   display: block;
   margin: 0 auto;
 }
 
-/* Grid flexível para seções com imagens e títulos */
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -81,13 +146,15 @@ h1, h3 {
   max-width: 300px;
   height: auto;
   transition: transform 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 2px 5px 15px #000;
 }
 
 .grid-item img:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
 }
 
-/* Seção de destaque/banner */
+
 .banner {
   width: 100%;
   max-width: 1800px;
@@ -96,12 +163,14 @@ h1, h3 {
 
 
 .banner img {
-  width: 100%;
-  height: auto;
-  transform: scale(1.05);
+  transition: 1s;
+  border-radius: 20px;
 }
 
-/* Footer */
+.banner img:hover{
+  transform: scale(1.01);
+}
+
 footer {
   background-color: #1c2120;
   color: white;
@@ -154,7 +223,7 @@ footer a:hover {
   border: none;
 }
 
-/* Botões */
+
 button {
   background-color: #1c2120;
   color: #fff;
@@ -164,12 +233,12 @@ button {
   cursor: pointer;
 }
 
-/* Ícones de redes sociais */
+
 footer img {
   margin: 5px;
 }
 
-/* Responsivo */
+
 @media screen and (max-width: 768px) {
   .grid {
     flex-direction: column;
@@ -181,33 +250,3 @@ footer img {
   }
 }
 
-/*
-.rodape{
-  display: flex;
-  justify-content: center;
-}
-
-.rodape__lista{
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin-top: 1em;
-}
-
-.rodape__logo{
-  display: flex;
-  justify-content: center;
-}
-
-.rodape__texto{
-  margin: 1em 0;
-  color: #1C2120;
-  font-size: 14px;
-}
-
-.lista__link a{
-  text-decoration: none;
-  color: #1c2120;
-  margin-left: 1em;
-}
-*/

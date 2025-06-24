@@ -1,2 +1,0 @@
-# PROJETO_TCC---SECTION
-
